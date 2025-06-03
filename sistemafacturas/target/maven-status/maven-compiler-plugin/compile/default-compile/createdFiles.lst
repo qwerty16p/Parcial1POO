@@ -1,2 +1,11 @@
-com\mycompany\sistemafacturas\ConexionBD.class
-com\mycompany\sistemafacturas\Sistemafacturas.class
+sistemaFacturacion\Main$3.class
+sistemaFacturacion\Main$6.class
+sistemaFacturacion\Main$4.class
+sistemaFacturacion\Main.class
+Conexion\ConexionBD.class
+sistemaFacturacion\Main$1.class
+sistemaFacturacion\Main$5.class
+sistemaFacturacion\Main$2.class
+Modelo\DetalleFactura.class
+Modelo\EncabezadoFactura.class
+DAO\FacturaDAO.class
