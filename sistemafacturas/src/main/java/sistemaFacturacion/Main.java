@@ -1,15 +1,3 @@
-/*
- * Sistema de Facturación - Ferretería
- * Programación Orientada a Objetos - Primer Examen Parcial
- * Ciclo 01/2025
- * 
- * Integrantes:
- * Nombre: [Tu nombre aquí] - Carnet: [Tu carnet aquí]
- * Nombre: [Nombre compañero 2] - Carnet: [Carnet compañero 2]
- * Nombre: [Nombre compañero 3] - Carnet: [Carnet compañero 3]
- * Nombre: [Nombre compañero 4] - Carnet: [Carnet compañero 4]
- */
-
 package sistemaFacturacion;
 
 import javax.swing.*;
@@ -19,6 +7,10 @@ import java.awt.event.ActionListener;
 import Conexion.ConexionBD;
 import Modelo.DetalleFactura;
 import Modelo.EncabezadoFactura;
+import Vista.ConsultarFactura;
+import Vista.IngresoFactura;
+import Vista.EliminarFacturas;
+import Vista.ModificarFactura;
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -197,57 +189,37 @@ public class Main extends JFrame {
     }
     
     // Métodos para abrir las diferentes ventanas
-    private void abrirVentanaIngreso() {
-        try {
-            // Aquí instanciarás tu clase para ingreso de facturas
-            // Ejemplo: new VentanaIngresoFactura().setVisible(true);
-            JOptionPane.showMessageDialog(this, 
-                "Abriendo ventana de Ingreso de Facturas...\n" +
-                "Aquí debes instanciar tu clase de ingreso.",
-                "Información", JOptionPane.INFORMATION_MESSAGE);
-        } catch (Exception e) {
-            mostrarError("Error al abrir ventana de ingreso", e);
-        }
+   private void abrirVentanaIngreso() {
+    try {
+        new IngresoFactura().setVisible(true);
+    } catch (Exception e) {
+        mostrarError("Error al abrir ventana de ingreso", e);
     }
+}
     
     private void abrirVentanaModificacion() {
         try {
-            // Aquí instanciarás tu clase para modificación de facturas
-            // Ejemplo: new VentanaModificarFactura().setVisible(true);
-            JOptionPane.showMessageDialog(this, 
-                "Abriendo ventana de Modificación de Facturas...\n" +
-                "Aquí debes instanciar tu clase de modificación.",
-                "Información", JOptionPane.INFORMATION_MESSAGE);
-        } catch (Exception e) {
-            mostrarError("Error al abrir ventana de modificación", e);
-        }
+         new ModificarFactura().setVisible(true);
+    } catch (Exception e) {
+        mostrarError("Error al abrir ventana de modificacion", e);
+    }
     }
     
     private void abrirVentanaEliminacion() {
         try {
-            // Aquí instanciarás tu clase para eliminación de facturas
-            // Ejemplo: new VentanaEliminarFactura().setVisible(true);
-            JOptionPane.showMessageDialog(this, 
-                "Abriendo ventana de Eliminación de Facturas...\n" +
-                "Aquí debes instanciar tu clase de eliminación.",
-                "Información", JOptionPane.INFORMATION_MESSAGE);
+            new EliminarFacturas().setVisible(true);
         } catch (Exception e) {
-            mostrarError("Error al abrir ventana de eliminación", e);
+            mostrarError("Error al abrir ventana de eliminar facturas", e);
         }
     }
     
     private void abrirVentanaConsulta() {
-        try {
-            // Aquí instanciarás tu clase para consulta de facturas
-            // Ejemplo: new VentanaConsultarFactura().setVisible(true);
-            JOptionPane.showMessageDialog(this, 
-                "Abriendo ventana de Consulta de Facturas...\n" +
-                "Aquí debes instanciar tu clase de consulta.",
-                "Información", JOptionPane.INFORMATION_MESSAGE);
-        } catch (Exception e) {
-            mostrarError("Error al abrir ventana de consulta", e);
-        }
+    try {
+        new ConsultarFactura().setVisible(true);
+    } catch (Exception e) {
+        mostrarError("Error al abrir ventana de consulta", e);
     }
+}
     
     private void salirAplicacion() {
         int respuesta = JOptionPane.showConfirmDialog(this,
