@@ -31,7 +31,7 @@ public class Main extends JFrame {
     
     private void initComponents() {
         // Configuración del título
-        lblTitulo = new JLabel("SISTEMA DE FACTURACIÓN - FERRETERÍA");
+        lblTitulo = new JLabel("SISTEMA DE FACTURACIÓN");
         lblTitulo.setFont(new Font("Arial", Font.BOLD, 18));
         lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
         lblTitulo.setForeground(new Color(51, 102, 153));
@@ -131,7 +131,7 @@ public class Main extends JFrame {
         JPanel panelPrincipal = new JPanel();
         panelPrincipal.setLayout(new GridBagLayout());
         panelPrincipal.setBackground(Color.WHITE);
-        panelPrincipal.setBorder(BorderFactory.createEmptyBorder(30, 30, 30, 30));
+        panelPrincipal.setBorder(BorderFactory.createEmptyBorder(50, 50, 50, 50));
         
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(10, 10, 10, 10);
